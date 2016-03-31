@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+shopt -q login_shell && echo 'Login shell' || echo 'Not login shell'
 source ~/.git-prompt.sh
 # If not running interactively, don't do anything
 case $- in
@@ -93,10 +93,14 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias st='status'
-alias docker='sudo docker'
+alias st='git status'
+alias commit='git commit'
+alias add='git add'
+alias update='sudo apt-get update'
 alias upgrade='sudo apt-get update && sudo apt-get upgrade'
 alias dist-upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
+alias autoremove='sudo apt-get autoremove'
+alias apt-get='sudo apt-get'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -122,23 +126,24 @@ if ! shopt -oq posix; then
   fi
 fi
 
-   # some other config in .bashrc
+ # some other config in .bashrc
 
-   # gitprompt configuration
+ # gitprompt configuration
+ GIT_PROMPT_ONLY_IN_REPO=1
 
-   # Set config variables first
-   GIT_PROMPT_ONLY_IN_REPO=1
+ # GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
 
-   # GIT_PROMPT_FETCH_REMOTE_STATUS=0   # uncomment to avoid fetching remote status
+ # GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
 
-   # GIT_PROMPT_SHOW_UPSTREAM=1 # uncomment to show upstream tracking branch
+ # GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
 
-   # GIT_PROMPT_STATUS_COMMAND=gitstatus_pre-1.7.10.sh # uncomment to support Git older than 1.7.10
+ # GIT_PROMPT_START=...    # uncomment for custom prompt start sequence
+ # GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
 
-   # GIT_PROMPT_START=...    # uncomment for custom prompt start sequence
-   # GIT_PROMPT_END=...      # uncomment for custom prompt end sequence
+ # as last entry source the gitprompt script
+ # GIT_PROMPT_THEME=Custom # use custom .git-prompt-colors.sh
+ # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
+ source ~/.bash-git-prompt/gitprompt.sh
 
-   # as last entry source the gitprompt script
-   # GIT_PROMPT_THEME=Custom # use custom .git-prompt-colors.sh
-   # GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-   source ~/.bash-git-prompt/gitprompt.sh
+export GOPATH=/var/www/go
+export PATH=$PATH:=$GOROOT/bin
