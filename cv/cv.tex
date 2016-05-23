@@ -3,7 +3,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
-
+% !TeX spellcheck = fr_FR
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 \usepackage[utf8]{inputenc}
@@ -11,7 +11,7 @@
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[french]{babel}
 \usepackage[scale=0.75]{geometry} % Reduce document margins
-\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+% Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
 %----------------------------------------------------------------------------------------
@@ -79,8 +79,9 @@
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------2
 
+\setlength{\hintscolumnwidth}{4,4cm}
 \section{Expériences professionel}
 
 \subsection{Secteur privé}
@@ -97,16 +98,19 @@ Détails:
    \item SoftGallery : base de projets avec serveurs apache et test via phpunit
    \item Batches/Web : images de bases contenant les configurations serveurs et logiciels synchrone avec l'environement de production
    \item Slate Documentation : Containerisation et auto génération de l'ensemble de la documentation des micro services via slate
-   \item Php-microservice-generator : Génération de docker pour microservice php
+   \item Php-micro-service-generator : Génération de docker pour micro-service php
   \end{itemize}
 \end{itemize}
 }
-\cventry{Juin 2015 à Septembre 2015}{Optimisation du Nexway Store pour déploiement en cloud}{Stage de 2A Ensiie}{Intégration de l'équipe DévOps Polonaise}{Katowice}{Containerisation des services du store avec Docker. Mise en place du déploiement avec CoreOS. Création de docker logiciel préparamétré avec GUI.}
-\cventry{Juin 2014 à Septembre 2014}{Développement de l'in app biling de Nexway}{Stage de 1A Ensiie}{Intégration de l'équipe de développement de l'IAB}{Saint Valéry sur Somme}{L'IAB est une application web intégrable à un service de paiement afin d'en assurer la facturation. Il a pour objectif d'être facilement redisgnable et performant.}
-%------------------------------------------------
-\subsection{Miscellaneous}
 
-\cventry{2008--2009}{Computer Repair Specialist}{Buy More}{Burbank}{}{Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.}
+\cventry{Juin 2015 Septembre 2015}{Optimisation du Nexway Store pour déploiement en cloud}{Stage de 2A Ensiie}{Intégration de l'équipe DévOps Polonaise}{Katowice}{Containerisation des services du store avec Docker. Mise en place du déploiement avec CoreOS. Création de docker logiciel préparamétré avec GUI.}
+\cventry{Juin 2014 Septembre 2014}{Développement de l'in app biling de Nexway}{Stage de 1A Ensiie}{Intégration de l'équipe de développement de l'IAB}{Saint Valéry sur Somme}{L'IAB est une application web intégrable à un service de paiement afin d'en assurer la facturation. Il a pour objectif d'être facilement redisgnable et performant.}
+\cventry{Août 2013}{Cactus Espaces Verts}{Entretient}{}{}{}
+\cventry{Juillet 2013}{Cactus Espaces Verts}{Réalisation de Terrasse en bois}{}{}{}
+\subsection{Secteur Associatif}
+\cventry{Octobre 2014 Mai 2015}{Gestion de site web}{Association Théâtre en festival}{Maintenance du site jusqu'en Décembre 2014 puis refonte de ce dernier.}{Le travail effectué sur le site peut être trouvé sur : freville.iiens.net/theatre}{}
+\cventry{Juillet 2011 Août 2011}{Club de tennis municipal de Cayeux sur Mer}{Accueil du public et gestion informatique des tournois}{}{}{}
+
 % 
 % %----------------------------------------------------------------------------------------
 % %	AWARDS SECTION
@@ -121,12 +125,11 @@ Détails:
 %	COMPUTER SKILLS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Computer skills}
-
-\cvitem{Basic}{\textsc{java}, Adobe Illustrator}
-\cvitem{Intermediate}{\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
-\cvitem{Advanced}{Computer Hardware and Support}
-
+\section{Compétences Informatique}
+\subsection{Développement Application et Micro-service}
+\cventry{Programmation Fonctionnel}{\textsc{OCaml},\textsc{CamlLight},\textsc{Lisp},\textsc{Python}}{Maîtrise, bon niveau, pratique courrante, pratique courrante}{}{}{}
+\cventry{Programmation Impérative}{\textsc{OCaml},\textsc{CamlLight}, C, \textsc{Go}}{Pratique courrante, pratique courrante, pratique courrante, bases}{}{}{}
+\cventry{Programmation Objet}{\textsc{OCaml}, \textsc{Java}, \textsc{}}{}{}{}{}
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS SECTION
 %----------------------------------------------------------------------------------------
