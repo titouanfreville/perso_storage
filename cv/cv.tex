@@ -1,0 +1,163 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[french]{babel}
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Titouan} % Your first name
+\familyname{Freville} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Étudiant à Supinfo Paris - B Sc}
+\address{40, rue de Paris}{80410 JOINVILLE LE PONT, FRANCE}
+\mobile{(+33)6 42 32 24 19}
+\email{titouanfreville@hotmail.fr}
+\homepage{https://fr.linkedin.com/in/titouanfreville}
+\photo[70pt][0.4pt]{photo.jpg}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Études}
+\cventry{2015--2016}{Bashelor of Science - Informatique}{SUPINFO Paris}{Contrat de professionalisation : Nexway - QA team}{}{}
+\cventry{2013--2015}{Formation initiale cycle ingénieur}{École Nationale Supérieure d'Informatique pour l'Industrie et l'Entreprise}{ENSIIE}{EVRY}{}  % Arguments not required can be left empty
+\cventry{2012--2013}{MP}{Lycée Henri Wallon}{Valenciennes}{option informatique}{}
+\cventry{2011--2012}{MPSI}{Lycée Henri Wallon}{Valenciennes}{option informatique}{}
+\cventry{2009--2011}{1ère et Terminale Scientifique}{Lycée Michel Anguier}{Eu}{anglais euro}{}
+
+% \section{Masters Thesis}
+%
+% \cvitem{Title}{\emph{Money Is The Root Of All Evil -- Or Is It?}}
+% \cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
+% \cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Expériences professionel}
+
+\subsection{Secteur privé}
+
+\cventry{2015--Présent}{Mise en place d'outils pour le service Quality Assurance de Nexway}{Alternance - Supinfo}{Intégration de l'équipe QA}{Nanterre}{Mise en place et développement d'outils aidant a synchroniser et controller la chaine de production des services informatique
+\newline{}\newline{}
+Détails:
+\begin{itemize}
+\item Mise en place d'une session test pour le dashboard Hygieia (https://github.com/capitalone/Hygieia)
+\item Containerisation de différents services via Docker: 
+  \begin{itemize}
+   \item MailStorage : gestionnaire de la liste de mail de certain service via rabitmq
+   \item AsyncPayement : system php de gestion de payement asynchrone
+   \item SoftGallery : base de projets avec serveurs apache et test via phpunit
+   \item Batches/Web : images de bases contenant les configurations serveurs et logiciels synchrone avec l'environement de production
+   \item Slate Documentation : Containerisation et auto génération de l'ensemble de la documentation des micro services via slate
+   \item Php-microservice-generator : Génération de docker pour microservice php
+  \end{itemize}
+\end{itemize}
+}
+\cventry{Juin 2015 à Septembre 2015}{Optimisation du Nexway Store pour déploiement en cloud}{Stage de 2A Ensiie}{Intégration de l'équipe DévOps Polonaise}{Katowice}{Containerisation des services du store avec Docker. Mise en place du déploiement avec CoreOS. Création de docker logiciel préparamétré avec GUI.}
+\cventry{Juin 2014 à Septembre 2014}{Développement de l'in app biling de Nexway}{Stage de 1A Ensiie}{Intégration de l'équipe de développement de l'IAB}{Saint Valéry sur Somme}{L'IAB est une application web intégrable à un service de paiement afin d'en assurer la facturation. Il a pour objectif d'être facilement redisgnable et performant.}
+%------------------------------------------------
+\subsection{Miscellaneous}
+
+\cventry{2008--2009}{Computer Repair Specialist}{Buy More}{Burbank}{}{Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.}
+% 
+% %----------------------------------------------------------------------------------------
+% %	AWARDS SECTION
+% %----------------------------------------------------------------------------------------
+% 
+% \section{Awards}
+% 
+% \cvitem{2011}{School of Business Postgraduate Scholarship}
+% \cvitem{2010}{Top Achiever Award -- Commerce}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Computer skills}
+
+\cvitem{Basic}{\textsc{java}, Adobe Illustrator}
+\cvitem{Intermediate}{\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
+\cvitem{Advanced}{Computer Hardware and Support}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Communication Skills}
+
+\cvitem{2010}{Oral Presentation at the California Business Conference}
+\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\cvitemwithcomment{English}{Mothertongue}{}
+\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
+\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Interests}
+
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+
+\cvlistdoubleitem{Piano}{Chess}
+\cvlistdoubleitem{Cooking}{Dancing}
+\cvlistitem{Running}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
