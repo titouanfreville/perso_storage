@@ -10,7 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[french]{babel}
-\usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage[left=10pt,top=1in,right=1in,bottom=1in]{geometry} % Reduce document margins
 % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -105,8 +105,8 @@ Détails:
 
 \cventry{Juin 2015 Septembre 2015}{Optimisation du Nexway Store pour déploiement en cloud}{Stage de 2A Ensiie}{Intégration de l'équipe DévOps Polonaise}{Katowice}{Containerisation des services du store avec Docker. Mise en place du déploiement avec CoreOS. Création de docker logiciel préparamétré avec GUI.}
 \cventry{Juin 2014 Septembre 2014}{Développement de l'in app biling de Nexway}{Stage de 1A Ensiie}{Intégration de l'équipe de développement de l'IAB}{Saint Valéry sur Somme}{L'IAB est une application web intégrable à un service de paiement afin d'en assurer la facturation. Il a pour objectif d'être facilement redisgnable et performant.}
-\cventry{Août 2013}{Cactus Espaces Verts}{Entretient}{}{}{}
-\cventry{Juillet 2013}{Cactus Espaces Verts}{Réalisation de Terrasse en bois}{}{}{}
+%\cventry{Août 2013}{Cactus Espaces Verts}{Entretient}{}{}{}
+%\cventry{Juillet 2013}{Cactus Espaces Verts}{Réalisation de Terrasse en bois}{}{}{}
 \subsection{Secteur Associatif}
 \cventry{Octobre 2014 Mai 2015}{Gestion de site web}{Association Théâtre en festival}{Maintenance du site jusqu'en Décembre 2014 puis refonte de ce dernier.}{Le travail effectué sur le site peut être trouvé sur : freville.iiens.net/theatre}{}
 \cventry{Juillet 2011 Août 2011}{Club de tennis municipal de Cayeux sur Mer}{Accueil du public et gestion informatique des tournois}{}{}{}
@@ -127,39 +127,44 @@ Détails:
 
 \section{Compétences Informatique}
 \subsection{Développement Application et Micro-service}
-\cventry{Programmation Fonctionnel}{\textsc{OCaml},\textsc{CamlLight},\textsc{Lisp},\textsc{Python}}{Maîtrise, bon niveau, pratique courrante, pratique courrante}{}{}{}
-\cventry{Programmation Impérative}{\textsc{OCaml},\textsc{CamlLight}, C, \textsc{Go}}{Pratique courrante, pratique courrante, pratique courrante, bases}{}{}{}
-\cventry{Programmation Objet}{\textsc{OCaml}, \textsc{Java}, \textsc{}}{}{}{}{}
-%----------------------------------------------------------------------------------------
-%	COMMUNICATION SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-\section{Communication Skills}
-
-\cvitem{2010}{Oral Presentation at the California Business Conference}
-\cvitem{2009}{Poster at the Annual Business Conference in Oregon}
+\cvitemwithcomment{Programmation Fonctionnel}{\textsc{OCaml},\textsc{CamlLight},\textsc{Lisp},\textsc{Python}}{Maîtrise, bon niveau, pratique courrante}
+\cvitemwithcomment{Programmation Impérative}{\textsc{OCaml},\textsc{CamlLight}, C, \textsc{Go}}{Pratique courrante, (\textsc{Go} : bases)}
+\cvitemwithcomment{Programmation Objet}{\textsc{OCaml}, \textsc{Java}, \textsc{Python}, \textsc{C++},\textsc{Php}}{Pratique courrante ( \textsc{Php} : bases fort)}
+\subsection{Développement Web}
+\cvitemwithcomment{Front}{HTML, CSS, JavaScript frameworks}{Bon niveau}
+\cvitemwithcomment{Server Side}{PHP, \textsc{Go}, \textsc{Java}, NodeJS, \textsc{C\#}}{Pratique courrante (\textsc{Go}: bases)}
+\cvitemwithcomment{MVC Framewoks}{\textsc{AngularJS}, \textsc{ASP.NET}, \textsc{.NET}, \textsc{JavaEE}}{Pratique courrante}
+\subsection{Développement Mobile}
+\cvdoubleitem{Android}{\itshape Pratique courante \upshape}{Swift}{\itshape Bases\upshape}
+\cvitem{Windows Phone}{\itshape Base + \upshape}
+\subsection{DevOps}
+\cvdoubleitem{Docker, Docker-compose}{\itshape Maîtrise \upshape}{Bash, Makefile}{\itshape Bon niveau\upshape}
+\subsection{Autre}
+\cvitem{OS}{\textsc{Ubuntu},\textsc{CoreOS},\textsc{Windows},\textsc{Mac}}
+\cvitemwithcomment{Base de Données}{\textsc{MySQL}, \textsc{MariaDB}, \textsc{PostgreSQL}, \textsc{MongoDB},\textsc{OracleDB}}{Bon niveau\\ ( \textsc{MongoDB}, \textsc{OracleDB} : bases) }
+\cvdoubleitem{Editeur de Texte, IDE}{Eclipse, suite IntelJ, Android Studio, Sublime Text, Atom, VisualStudio}{Serveurs}{Apache, Nginx}
+\cvitem{ \LaTeX }{\itshape Pratique courrante \upshape}
+\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvlistdoubleitem{Intelligence Artificielle}{Système expert}
+\cvlistdoubleitem{Testing}{Machine Learning}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
-
-\section{Languages}
-
-\cvitemwithcomment{English}{Mothertongue}{}
-\cvitemwithcomment{Spanish}{Intermediate}{Conversationally fluent}
-\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+\setlength{\hintscolumnwidth}{2cm}
+\section{Langues}
+\cvitemwithcomment{Français}{Mothertongue}{}
+\cvitemwithcomment{Anglais}{Parlé, lue et écrit}{Courrant}
+\cvitemwithcomment{Allemand}{Basic}{Basic words and phrases only}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Interests}
-
-\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-
-\cvlistdoubleitem{Piano}{Chess}
-\cvlistdoubleitem{Cooking}{Dancing}
-\cvlistitem{Running}
+\cvitemwithcomment{Musique}{Bon niveau amateur }{12 ans de Piano, Solfège; 4 ans de flûte traversière; guitare}
+\cvitem{Sport}{ marche à pied, natation (7 ans en club), tennis (5 ans en club), escalade, coile (niveau 3), VTT}
+\cvdoubleitem{}{Poèsie, lecture}{}{Biologie et géologie}
 
 %----------------------------------------------------------------------------------------
 
