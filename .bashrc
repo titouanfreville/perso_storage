@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 shopt -q login_shell && echo 'Login shell' || echo 'Not login shell'
-source ~/.git-prompt.sh
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -48,12 +47,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -96,12 +95,15 @@ alias l='ls -CF'
 alias st='git status'
 alias commit='git commit'
 alias add='git add'
-alias update='sudo apt-get update'
-alias upgrade='sudo apt-get update && sudo apt-get upgrade'
-alias dist-upgrade='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade'
-alias autoremove='sudo apt-get autoremove'
-alias apt-get='sudo apt-get'
-
+alias update='sudo apt update'
+alias upgrade='sudo apt update && sudo apt upgrade'
+alias dist-upgrade='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y'
+alias autoremove='sudo apt autoremove'
+alias dcu='docker-compose up'
+alias dcs='docker-compose stop'
+alias dcb='docker-compose build'
+alias git_update='git_update.sh -b famicity_=develop /home/tfreville/git'
+alias hello='dist-upgrade; git_update; ssh_setup.sh'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -146,4 +148,5 @@ fi
  source ~/.bash-git-prompt/gitprompt.sh
 
 export GOPATH=/var/www/go
-export PATH=$PATH:=$GOROOT/bin
+export PATH=$PATH:$GOROOT/bin:$HOME/git/docker_cluster:$HOME/bin
+
